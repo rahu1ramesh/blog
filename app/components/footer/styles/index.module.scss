@@ -1,0 +1,29 @@
+.footer {
+    color: black;
+    font-size: large;
+    font-weight: normal;
+    text-decoration: none;
+    padding-inline: 1rem;
+    align-self: center;
+    justify-content: space-between;
+    display: flex;
+    div[id="copy-right"] {
+        align-self: center;
+    }
+    div[id="social-media"] {
+        display: flex;
+    }
+}
+
+.item {
+    padding: 0.25rem;
+    list-style-type: none;
+    margin-block: 0.5rem;
+    a:focus-within {
+        outline: none;
+    }
+}
+
+.item:focus-within {
+    outline: orange auto 1px;
+}
