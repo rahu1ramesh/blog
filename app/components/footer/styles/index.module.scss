@@ -1,3 +1,5 @@
+@use "../../../styles/variables" as *;
+
 .footer {
     color: black;
     font-size: large;
@@ -9,7 +11,7 @@
     display: flex;
     div[id="copy-right"] {
         align-self: center;
-        @media (max-width:1251px) {
+        @media (max-width: $breakpoint-mobile) {
             font-size: medium;
         }
     }
@@ -28,5 +30,5 @@
 }
 
 .item:focus-within {
-    outline: orange auto 1px;
+    outline: $color-accent auto 1px;
 }

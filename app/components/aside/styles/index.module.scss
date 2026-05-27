@@ -1,10 +1,12 @@
+@use "../../../styles/variables" as *;
+
 .aside {
     max-width: 10rem;
     display: flex;
     flex-direction: column;
     z-index: 100;
 
-    @media (max-width:1251px) {
+    @media (max-width: $breakpoint-mobile) {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -15,7 +17,7 @@
 
     ul {
         padding: 0;
-        @media (max-width:1251px) {
+        @media (max-width: $breakpoint-mobile) {
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -38,30 +40,30 @@
     text-decoration: none;
     padding-block: 0.5rem;
     padding-inline: 0.5rem;
-    @media (max-width:1251px) {
+    @media (max-width: $breakpoint-mobile) {
         font-size: medium;
     }
 }
 
 .link:focus-within {
-    outline: orange auto 1px;
+    outline: $color-accent auto 1px;
 }
 
 .link::before {
     content: "> ";
 
-    @media (max-width:1251px) {
+    @media (max-width: $breakpoint-mobile) {
         content: none;
     }
 }
 
 .active {
-    color: orange;
+    color: $color-accent;
 }
 
 .active::before {
     content: "* ";
-    @media (max-width:1251px) {
+    @media (max-width: $breakpoint-mobile) {
         content: none;
     }
 }
@@ -73,7 +75,7 @@
     height: 6rem;
     width: 6rem;
 
-    @media (max-width:1251px) {
+    @media (max-width: $breakpoint-mobile) {
         height: 3rem;
         width: 3rem;
         padding-inline-start: 2rem;

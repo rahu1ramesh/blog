@@ -1,7 +1,9 @@
+@use "../../styles/variables" as *;
+
 .article {
     width: calc(100vw - 63rem);
-    
-    @media (max-width:1251px) {
+
+    @media (max-width: $breakpoint-mobile) {
         left: 0;
         width: stretch;
         margin-inline: 2rem;
@@ -13,16 +15,14 @@
     }
 
     table {
-        display: table;
         border-spacing: 0;
         border-collapse: collapse;
         box-sizing: border-box;
-        text-indent: 0;
         margin: 1.5rem auto;
         width: 100%;
 
         th {
-            background-color: orange;
+            background-color: $color-accent;
             color: black;
             font-weight: 600;
             padding: 0.75rem 1.25rem;
@@ -48,9 +48,9 @@
 .title {
     font-size: xx-large;
     margin-top: 5rem;
-    margin-bottom: 0rem;
+    margin-bottom: 0;
 
-    @media (max-width:1251px) {
+    @media (max-width: $breakpoint-mobile) {
         margin-top: 1rem;
     }
 }
