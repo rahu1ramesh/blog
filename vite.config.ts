@@ -20,6 +20,13 @@ export default defineConfig({
       '**/models',
     ],
     coverage: {
+      exclude: [
+        '**/constants',
+        '**/styles',
+        '**/__mocks__',
+        '**/setupTests.ts',
+        '**/models',
+      ],
       provider: 'v8',
       reporter: ['text', 'json', 'html'],
       thresholds: {
