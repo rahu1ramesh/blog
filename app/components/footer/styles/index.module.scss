@@ -9,6 +9,9 @@
     display: flex;
     div[id="copy-right"] {
         align-self: center;
+        @media (max-width:1251px) {
+            font-size: medium;
+        }
     }
     div[id="social-media"] {
         display: flex;

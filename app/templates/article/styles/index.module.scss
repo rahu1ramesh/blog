@@ -1,5 +1,11 @@
 .article {
     width: calc(100vw - 63rem);
+    
+    @media (max-width:1251px) {
+        left: 0;
+        width: stretch;
+        margin-inline: 2rem;
+    }
 
     img {
         display: block;
@@ -43,6 +49,10 @@
     font-size: xx-large;
     margin-top: 5rem;
     margin-bottom: 0rem;
+
+    @media (max-width:1251px) {
+        margin-top: 1rem;
+    }
 }
 
 .subtitle {
