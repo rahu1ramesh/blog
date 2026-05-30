@@ -1,0 +1,39 @@
+@use "~/styles/variables" as *;
+
+.section {
+    margin-top: 5rem;
+    padding-bottom: 5rem;
+    width: calc(100vw - 63rem);
+    @media (max-width: $breakpoint-mobile) {
+        left: 0;
+        width: stretch;
+        margin-inline: 2rem;
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem 2rem;
+    @media (max-width: $breakpoint-mobile) {
+        margin-inline: -2rem;
+        grid-template-columns: 1fr 1fr;
+        gap: unset;
+    }
+}
+
+.title {
+    font-size: xx-large;
+    margin-bottom: 0.5rem;
+    @media (max-width: $breakpoint-mobile) {
+        margin-top: 1rem;
+    }
+}
+
+.subtitle {
+    color: black;
+    font-size: large;
+    margin-bottom: 2rem;
+    margin-top: 0;
+}
+
