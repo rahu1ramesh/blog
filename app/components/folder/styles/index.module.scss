@@ -1,0 +1,131 @@
+@use "~/styles/variables" as *;
+
+.container {
+    margin-top: 4rem;
+    --transition: 350ms;
+    --folder-W: 120px;
+    --folder-H: 80px;
+
+    @media (max-width: $breakpoint-mobile) {
+        margin-top: 2rem;
+        scale: 0.75;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: anchor-center;
+    padding: 10px;
+    background: linear-gradient(135deg, $color-accent, $color-linear-gradient);
+    border-radius: 15px;
+    width: 11rem;
+    height: calc(var(--folder-H) * 1.2);
+    position: relative;
+}
+
+.folder {
+    position: absolute;
+    top: -20px;
+    left: calc(50% - 60px);
+    animation: float 2.5s infinite ease-in-out;
+    transition: transform var(--transition) ease;
+}
+
+.folder:hover {
+    transform: scale(1.05);
+}
+
+.folder .frontSide,
+.folder .backSide {
+    position: absolute;
+    transition: transform var(--transition);
+    transform-origin: bottom center;
+}
+
+.folder .backSide::before,
+.folder .backSide::after {
+    content: "";
+    display: block;
+    background-color: white;
+    opacity: 0.5;
+    width: var(--folder-W);
+    height: var(--folder-H);
+    position: absolute;
+    transform-origin: bottom center;
+    border-radius: 15px;
+    transition: transform 350ms;
+    z-index: 0;
+}
+
+.container:hover .backSide::before {
+    transform: rotateX(-5deg) skewX(5deg);
+}
+.container:hover .backSide::after {
+    transform: rotateX(-15deg) skewX(12deg);
+}
+
+.folder .frontSide {
+    z-index: 1;
+}
+
+.container:hover .frontSide {
+    transform: rotateX(-40deg) skewX(15deg);
+}
+
+.folder .tip {
+    background: linear-gradient(135deg, #ff9a56, #ff6f56);
+    width: 80px;
+    height: 20px;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: -10px;
+    z-index: 2;
+}
+
+.folder .cover {
+    background: linear-gradient(135deg, #ffe563, #ffc663);
+    width: var(--folder-W);
+    height: var(--folder-H);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.name {
+    font-size: 1.1em;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background var(--transition) ease;
+    display: inline-block;
+    width: 65%;
+    position: absolute;
+    bottom: -0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.name::first-letter {
+  text-transform: uppercase;
+}
+
+.name input[type="file"] {
+    display: none;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
