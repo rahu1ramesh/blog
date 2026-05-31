@@ -9,7 +9,7 @@ const Aside = () => {
     const asideItems = updateCurrentStatus(APP_ASIDE_ITEMS, location.pathname);
     return (
         <aside id="page-aside" data-testid="page-aside-test-id" aria-label="Aside" className={styles.aside}>
-            <Link to="/" id="page-aside-logo" data-testid="page-aside-logo-test-id" aria-label="Logo">
+            <Link to="/" id="page-aside-logo" data-testid="page-aside-logo-test-id" aria-label="Logo" className={styles.logo}>
                 <img id={`logo`} data-testid={`logo-test-id`} src={`${import.meta.env.BASE_URL}favicon.png`} alt={"Logo"} className={styles.img}/>
             </Link>
             <ul id="page-aside-list" data-testid="page-aside-list-test-id" aria-label="List">
