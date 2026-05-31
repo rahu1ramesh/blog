@@ -7,7 +7,7 @@ interface BaseProps {
 }
 const Base = ({ body }: BaseProps) => {
   return (
-    <div id="Base Template" data-testid="Base Template-test-id" className={styles.template}>
+    <div id="base-template" data-testid="base-template-test-id" className={styles.template}>
         <div id="content-area" data-testid="content-area-test-id" className={styles.content} >
             <div id="left-section" data-testid="left-section-test-id" >
                 <div id="header-area" data-testid="header-area-test-id" ><Aside /></div>
