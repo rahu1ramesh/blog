@@ -10,6 +10,12 @@ describe('Aside', () => {
     expect(screen.getByTestId("logo-test-id")).toBeInTheDocument();
   })
 
+  it("should navigate to / when logo is clicked", () => {
+    render(<MemoryRouter><Aside /></MemoryRouter>);
+    const logo = screen.getByTestId("logo-test-id");
+    expect(logo.closest('a')).toHaveAttribute('href', '/');
+  })
+
   it.each(APP_ASIDE_ITEMS)('should render nav links', ({ id, label, link }) => {
     render(<MemoryRouter><Aside /></MemoryRouter>);
     const listItem = screen.getByTestId(`page-aside-${id}-test-id`);
