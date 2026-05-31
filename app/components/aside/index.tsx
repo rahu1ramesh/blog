@@ -9,7 +9,7 @@ const Aside = () => {
     const asideItems = updateCurrentStatus(APP_ASIDE_ITEMS, location.pathname);
     return (
         <aside id="page-aside" data-testid="page-aside-test-id" aria-label="Aside" className={styles.aside}>
-            <img id={`logo`} data-testid={`logo-test-id`} src={`/favicon.png`} alt={"Logo"} className={styles.img}/>
+            <img id={`logo`} data-testid={`logo-test-id`} src={`${import.meta.env.BASE_URL}favicon.png`} alt={"Logo"} className={styles.img}/>
             <ul id="page-aside-list" data-testid="page-aside-list-test-id" aria-label="List">
                 {asideItems.map((item) => (
                     <li key={item.id} id={`page-aside-${item.id}`} data-testid={`page-aside-${item.id}-test-id`} aria-label={item.label} className={styles.item}>

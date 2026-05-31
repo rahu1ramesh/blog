@@ -3,7 +3,7 @@ import { reactRouter } from "@react-router/dev/vite";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: '/blog/',
+  base: process.env.NODE_ENV === 'production' ? '/blog/' : '/',
   plugins: [!process.env.VITEST && reactRouter()].filter(Boolean),
   test: {
     globals: true,

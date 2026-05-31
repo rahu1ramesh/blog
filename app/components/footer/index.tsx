@@ -10,7 +10,7 @@ const Footer = () => {
         {SOCIAL_MEDIA_LINKS.map((item) => (
           <li key={item.id} id={`social-media-item-${item.id}`} data-testid={`social-media-item-${item.id}-test-id`} aria-label={item.label} className={styles.item}>
             <a id={`${item.id}-link`} data-testid={`${item.id}-link-test-id`} href={item.link} aria-label={item.label + " Link"}>
-              <img id={`${item.id}-img`} data-testid={`${item.id}-img-test-id`} src={`/${item.icon}.svg`} alt={item.label} />
+              <img id={`${item.id}-img`} data-testid={`${item.id}-img-test-id`} src={`${import.meta.env.BASE_URL}${item.icon}.svg`} alt={item.label} />
             </a>
           </li>
         ))}

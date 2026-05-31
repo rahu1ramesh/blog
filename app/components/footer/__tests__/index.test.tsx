@@ -21,7 +21,7 @@ describe('Footer', () => {
     expect(anchor).toHaveAttribute('aria-label', `${label} Link`);
 
     const img = listItem.querySelector('img');
-    expect(img).toHaveAttribute('src', `/${icon}.svg`);
+    expect(img).toHaveAttribute('src', `${import.meta.env.BASE_URL}${icon}.svg`);
     expect(img).toHaveAttribute('alt', label);
   });
 })
