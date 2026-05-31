@@ -1,5 +1,6 @@
 
 import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router';
 import Section from '..';
 
 const mockItems = [
@@ -9,13 +10,13 @@ const mockItems = [
 
 describe('Section', () => {
   it("should render the title and subtitle correctly", () => {
-    render(<Section title="Writing" subtitle='All those moments will be lost in time, like tears in rain' items={mockItems} />);
+    render(<MemoryRouter><Section title="Writing" subtitle='All those moments will be lost in time, like tears in rain' items={mockItems} /></MemoryRouter>);
     expect(screen.getByTestId("section-template-title-test-id")).toHaveTextContent("Writing");
     expect(screen.getByTestId("section-template-subtitle-test-id")).toHaveTextContent("All those moments will be lost in time, like tears in rain");
   });
 
   it("should render the list items correctly", () => {
-    render(<Section title="Writing" items={mockItems} />);
+    render(<MemoryRouter><Section title="Writing" items={mockItems} /></MemoryRouter>);
 
     expect(screen.getByTestId("software-folder-title-test-id")).toHaveTextContent("software");
     expect(screen.getByTestId("books-folder-title-test-id")).toHaveTextContent("books");
@@ -24,7 +25,7 @@ describe('Section', () => {
   });
 
   it('should skip optional fields', () => {
-    render(<Section title="Writing" items={mockItems} />);
+    render(<MemoryRouter><Section title="Writing" items={mockItems} /></MemoryRouter>);
 
     expect(screen.queryByTestId("section-template-subtitle-test-id")).not.toBeInTheDocument();
   });

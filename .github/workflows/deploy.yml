@@ -31,11 +31,17 @@ jobs:
 
       - run: npm run build
 
-      - uses: actions/configure-pages@v6
+      - name: Prepare GitHub Pages artifact
+        run: |
+          cp -r build/client/assets build/client/blog/
+          cp build/client/favicon.png build/client/blog/
+          cp build/client/*.svg build/client/blog/
+
+      - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: build/client
+          path: build/client/blog
 
   deploy:
     needs: build

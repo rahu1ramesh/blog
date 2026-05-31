@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import styles from "./styles/index.module.scss";
-import { useLocation } from 'react-router';
+import { useLocation, Link } from 'react-router';
 import { APP_ASIDE_ITEMS } from './constants';
 import { updateCurrentStatus } from './utils';
 
@@ -13,9 +13,9 @@ const Aside = () => {
             <ul id="page-aside-list" data-testid="page-aside-list-test-id" aria-label="List">
                 {asideItems.map((item) => (
                     <li key={item.id} id={`page-aside-${item.id}`} data-testid={`page-aside-${item.id}-test-id`} aria-label={item.label} className={styles.item}>
-                        <a id={`page-aside-${item.id}-link`} data-testid={`page-aside-${item.id}-link-test-id`} href={item.link} aria-label={`${item.label} Link`} className={classNames(styles.link, { [styles.active]: item.isCurrent })}>
+                        <Link id={`page-aside-${item.id}-link`} data-testid={`page-aside-${item.id}-link-test-id`} to={item.link} aria-label={`${item.label} Link`} className={classNames(styles.link, { [styles.active]: item.isCurrent })}>
                             {item.label}
-                        </a>
+                        </Link>
                     </li>
                 ))}
             </ul>
