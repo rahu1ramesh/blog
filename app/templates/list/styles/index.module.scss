@@ -1,0 +1,53 @@
+@use "~/styles/variables" as *;
+
+.list {
+    width: calc(100vw - 63rem);
+    margin-top: 5rem;
+    @media (max-width: $breakpoint-mobile) {
+        width: stretch;
+        margin-inline: 2rem;
+        margin-top: unset;
+        padding-bottom: 5rem;
+    }
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-block: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover .title {
+        text-decoration: underline;
+    }
+}
+
+
+.title {
+    font-size: xx-large;
+    margin-bottom: 0.5rem;
+    @media (max-width: $breakpoint-mobile) {
+        margin-top: 1rem;
+    }
+}
+
+.title::first-letter {
+  text-transform: uppercase;
+}
+
+.itemTitle {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #111;
+}
+
+.date {
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #555;
+    white-space: nowrap;
+    margin-left: 2rem;
+}
