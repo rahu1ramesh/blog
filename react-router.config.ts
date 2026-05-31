@@ -27,6 +27,7 @@ function getPrerenderedPaths(): string[] {
 }
 
 export default {
+  ssr: false,
   ...(process.env.NODE_ENV === 'production' && { basename: '/blog' }),
   prerender: getPrerenderedPaths,
 } satisfies Config;
