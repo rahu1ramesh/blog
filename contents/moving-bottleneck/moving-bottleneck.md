@@ -62,6 +62,9 @@ Ever since late 2022, with the rise of AI, it is widely accepted across the indu
 
 Yet this problem is not new and is not unique to software development. During the initial rollout of the COVID-19 vaccines, public health departments faced severe logistical hurdles that violently shifted across the supply chain. While early bottleneck issues regarding manufacturing and cold-chain storage were quickly resolved by pharmaceutical scaling, the systemic pressure immediately crashed downward onto local administration and registration software, where malfunctioning appointment websites and a shortage of trained nursing staff left millions of doses frozen in storage [while citizens struggled to secure a shot](https://www.reuters.com/world/uk/long-queues-form-vaccine-centre-central-london-reuters-photographer-2021-12-14/).
 
+![PR Review Meme](./images/review-meme.png)
+*Menace of a reviewer—but strictly on home turf*
+
 Code review helped me understand what others were doing, what was new, and taught me different approaches and perspectives on software development. With the influx, it's hard to catch up and much more difficult to learn. When a Pull Request is opened that may be suboptimal, I am influenced by the selected solution and find it harder to suggest alternative approaches.
 
 As a developer, when I push code, I take responsibility for the changes, and as a reviewer, I am accountable for the PR that I approve. I cannot hold AI responsible for the changes it suggested, and until the day comes when it can, developers like me will always be the bottleneck.
