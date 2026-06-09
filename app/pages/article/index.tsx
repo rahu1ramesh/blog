@@ -5,7 +5,11 @@ import ArticleTemplate from "~/templates/article";
 import Base from "~/templates/base";
 
 export function meta({ data }: { data: { article: { frontmatter: { title: string } } } }) {
-  return [{ title: `${data.article.frontmatter.title.replace(/\b\w/g, c => c.toUpperCase())} | Rahul Ramesh` }];
+  const title = data.article.frontmatter.title.replace(/\b\w/g, c => c.toUpperCase());
+  return [
+    { title: `${title} | Rahul Ramesh` },
+    { name: "description", content: `${title} - Article` },
+  ];
 }
 
 export function loader({ params }: LoaderFunctionArgs) {

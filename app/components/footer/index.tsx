@@ -6,15 +6,15 @@ const Footer = () => {
   return (
     <div id="page-footer" data-testid="page-footer-test-id" aria-label="Footer" className={styles.footer}>
       <div id="copy-right" data-testid="copy-right-test-id" aria-label="Copyright" >{APP_FOOTER_TEXT(currentYear)}</div>
-      <div id="social-media" data-testid="social-media-test-id" aria-label="Social Media" >
+      <ul id="social-media" data-testid="social-media-test-id" aria-label="Social Media" >
         {SOCIAL_MEDIA_LINKS.map((item) => (
           <li key={item.id} id={`social-media-item-${item.id}`} data-testid={`social-media-item-${item.id}-test-id`} aria-label={item.label} className={styles.item}>
             <a id={`${item.id}-link`} data-testid={`${item.id}-link-test-id`} href={item.link} aria-label={item.label + " Link"}>
-              <img id={`${item.id}-img`} data-testid={`${item.id}-img-test-id`} src={`${import.meta.env.BASE_URL}${item.icon}.svg`} alt={item.label} />
+              <img id={`${item.id}-img`} data-testid={`${item.id}-img-test-id`} src={`${import.meta.env.BASE_URL}${item.icon}.svg`} alt={item.label} width="32" height="32" />
             </a>
           </li>
         ))}
-      </div>
+      </ul>
     </div>
   )
 }

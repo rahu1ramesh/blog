@@ -5,7 +5,11 @@ import Base from "~/templates/base";
 import List from "~/templates/list";
 
 export function meta({ data }: { data: { tag: string } }) {
-  return [{ title: `${data.tag.replace(/\b\w/g, c => c.toUpperCase())} | Rahul Ramesh` }];
+  const tag = data.tag.replace(/\b\w/g, c => c.toUpperCase());
+  return [
+    { title: `${tag} | Rahul Ramesh` },
+    { name: "description", content: `Articles tagged ${tag}` },
+  ];
 }
 
 export function loader({ params }: LoaderFunctionArgs) {

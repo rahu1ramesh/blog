@@ -4,6 +4,7 @@ import Base from "~/templates/base";
 export function meta() {
   return [
     { title: "About | Rahul Ramesh" },
+    { name: "description", content: "Developer at Thoughtworks India, serial hobbyist, reader, and writer. Receipts of rabbit holes fallen down." },
   ];
 }
 

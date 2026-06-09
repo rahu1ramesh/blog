@@ -15,8 +15,10 @@
             font-size: medium;
         }
     }
-    div[id="social-media"] {
+    ul[id="social-media"] {
         display: flex;
+        padding: 0;
+        margin: 0;
     }
 }
 

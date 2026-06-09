@@ -4,7 +4,10 @@ import Base from "~/templates/base";
 import Section from "~/templates/section";
 
 export function meta() {
-  return [{ title: "Writing | Rahul Ramesh" }];
+  return [
+    { title: "Writing | Rahul Ramesh" },
+    { name: "description", content: "A journal of things encountered, explored and examined" },
+  ];
 }
 
 export function loader() {

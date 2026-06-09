@@ -12,9 +12,9 @@ const Base = ({ body }: BaseProps) => {
             <div id="left-section" data-testid="left-section-test-id" >
                 <div id="header-area" data-testid="header-area-test-id" ><Aside /></div>
             </div>
-            <div id="right-section" data-testid="right-section-test-id" >
+            <main id="right-section" data-testid="right-section-test-id" >
                 <div id="body-area" data-testid="body-area-test-id" >{body}</div>
-            </div>
+            </main>
         </div>
         <div id="footer-area" data-testid="footer-area-test-id" className={styles.footer} ><Footer /></div>
     </div>

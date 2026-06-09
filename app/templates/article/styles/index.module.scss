@@ -2,10 +2,14 @@
 
 .article {
     width: calc(100vw - 63rem);
+    padding-bottom: 4rem;
+    a {
+        color: $color-accent-text;
+    }
 
     @media (max-width: $breakpoint-mobile) {
         left: 0;
-        width: stretch;
+        width: 100%;
         margin-inline: 2rem;
         padding-bottom: 5rem;
     }
@@ -13,7 +17,8 @@
     img {
         display: block;
         margin: 0 auto;
-        width: stretch;
+        max-width: 100%;
+        height: auto;
         padding-bottom: 0.5rem;
     }
 
