@@ -9,7 +9,7 @@
 
     @media (max-width: $breakpoint-mobile) {
         left: 0;
-        width: 100%;
+        width: stretch;
         margin-inline: 2rem;
         padding-bottom: 5rem;
     }
