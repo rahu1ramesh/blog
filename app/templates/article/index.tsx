@@ -36,7 +36,7 @@ const Article = ({title, subtitle, content, basePath, imageMap}: ArticleProps) =
                 rehypePlugins={[rehypeHighlight]}
                 components={{
                     img: ({ src, alt, title: imgTitle }) => (
-                        <img src={resolveImageSrc(src)} alt={alt} title={imgTitle} />
+                        <img src={resolveImageSrc(src)} alt={alt} title={imgTitle} loading="lazy" />
                     ),
                 }}
             >
