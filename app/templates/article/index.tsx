@@ -1,6 +1,7 @@
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight";
+import rehypeRaw from "rehype-raw";
 import "highlight.js/styles/atom-one-dark.css";
 import styles from "./styles/index.module.scss"
 
@@ -33,7 +34,7 @@ const Article = ({title, subtitle, content, basePath, imageMap}: ArticleProps) =
                 data-testid="article-content-test-id"
                 aria-label="Article Content"
                 remarkPlugins={[remarkGfm]}
-                rehypePlugins={[rehypeHighlight]}
+                rehypePlugins={[rehypeHighlight, rehypeRaw]}
                 components={{
                     img: ({ src, alt, title: imgTitle }) => (
                         <img src={resolveImageSrc(src)} alt={alt} title={imgTitle} loading="lazy" />
